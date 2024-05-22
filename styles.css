@@ -106,8 +106,17 @@ body{
     box-shadow: 0 0 4px 1px #cccccc;
     outline: 1px solid blue;
 }
-#form input:invalid{
-    outline: 1px solid red;
+#form .invalid input{
+    outline: 1px solid red !important;
+    box-shadow: 0 0 4px 1px #cccccc !important;
+}
+#password-field.invalid::after{
+    content: '\A* Passwords do not match';
+    white-space: pre-wrap;
+    color: red;
+    text-transform: none;
+    position: relative;
+    top: 2px;
 }
 #form label::after{
     content: '\a';
