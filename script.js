@@ -17,7 +17,6 @@ const checkFormInputs = () => {
     inputs.forEach(elem => {
         if (elem.id.includes('password') && !checkPasswords()){
             elem.parentNode.classList.add('invalid')
-
         }
         if (elem.id.includes('password') && checkPasswords()){
             elem.parentNode.classList.remove('invalid')
