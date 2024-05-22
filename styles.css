@@ -1,0 +1,133 @@
+:root{
+    font-size: 10px;
+    --section-1-width: 40vw;
+    --section-2-width: calc(100vw - var(--section-1-width))
+}
+@font-face {
+    font-family: "Norse-Bold";
+    src: url('fonts/Norse-Bold.otf') format("truetype");
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+#section-1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(img/halie-west-unsplash.jpg);    background-size: cover;
+    min-width: var(--section-1-width);
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: center;
+}
+#logo-section{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: relative;
+    top: -60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 0;
+}
+#logo-section img{
+    width: auto;
+    height: 12rem;
+}
+#title{
+    font-family: 'Norse-Bold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 8.8rem;
+}
+.credits, .credits *{
+    color: white;
+    font-size: 1.6rem;
+    margin: 1vh 0;
+}
+#section-2{
+    display: flex;
+    width: var(--section-2-width);
+    flex-direction: column;
+    justify-content: center;
+    background-color: #eee;
+    color: #222;
+}
+#section-2-container > div{
+    padding: 4vh;
+}
+#text-container{
+    font-size: 2.1rem;
+    font-weight: 800;
+    margin-top: 2vh;
+    max-width: 800px;
+}
+#text-container p:first-child{
+    margin: 2vh 0;
+}
+#form-container{
+    box-shadow: 0 3px 4px 1px #cccccc;
+    background-color: #fff;
+}
+#form-title{
+    font-size: 2.3rem;
+    margin-bottom: 3vh;
+}
+#form{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+}
+#form label{
+    font-size: 1.0rem;
+    font-weight: 800;
+    color: #666;
+    letter-spacing: 3px;
+}
+#form div{
+    width: 42%;
+    margin: 1vh 0;
+    text-transform: uppercase;
+}
+#form input{
+    width: 80%;
+    font-size: 1.6rem;
+    padding: 0.8vh;
+    border: 1px solid #E5E7EB;
+    border-radius: 0.6vh;
+}
+#form input:focus{
+    box-shadow: 0 0 4px 1px #cccccc;
+    outline: 1px solid blue;
+}
+#form input:invalid{
+    outline: 1px solid red;
+}
+#form label::after{
+    content: '\a';
+    white-space: pre;
+}
+#account-container{
+    font-size: 1.6rem;
+}
+.btn{
+    background-color: #596D48;
+    width: 230px;
+    text-align: center;
+    border-radius: .8vh;
+    color: #fff;
+    margin-bottom: 2vh;
+    padding: 15px;
+    font-weight: 800;
+}
+#account-container a{
+    color: #596D48;
+    text-decoration: none;
+    font-weight: 800;
+}
